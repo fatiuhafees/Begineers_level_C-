@@ -1,0 +1,117 @@
+// Format Specifier % = defines and formats a type of data to be displayed 
+
+//%c = char 
+//%s = string (array of charactors)
+//%f = float
+//%lf = double 
+//%d = integer 
+
+//%.1 = decimal precision 
+//%1 = minium field width 
+//%- = left allign 
+
+#include <stdio.h>
+float item1 = 2.3222;
+float item2 = 12.3222;
+
+int main(){
+//decimal precision %.1
+     printf("Item 1: %.2f",item1);  //ouput: Item 1: 2.32
+
+//minium field width %1
+     printf("Item 1: %8.2f/n",item1);  //ouput: Item 1:         2.32
+     printf("Item 1: %8.2f/n",item2);  //ouput: Item 2:        12.32
+
+//left allign %-1
+     printf("Item 1: %-8.2f",item1);  //ouput: Item 1: 2.32
+     printf("Item 2: %-8.2f/n",item2);//ouput: Item 2: 12.32
+     return 0;
+}
+
+
+
+
+
+
+//Arithmetic Operators 
+
+// +  (addition)
+// -  (sudtraction)
+// *  (multiplication)
+// /  (divistion)
+// %  (modulus),   shows remainder 
+// ++ (increment), adds one
+// -- (decrement), takes one
+
+#include <stdio.h>
+int x = 5;
+int y = 2;
+
+int main(){
+// /
+     float z = x / (float)y;
+     printf("%f", z); //output: 2.5 
+
+// ++
+     int x++;
+     printf("%d", x); //output: 6 
+     return 0;
+}
+
+
+
+
+
+
+//User Input 
+
+// fgets(),   allows us to get user input but with white space, includes new line charactor 
+// scanf(),   allows us to get user input 
+
+#include <stdio.h>
+int age;
+char name[25]; 
+
+int main(){
+// scanf()
+     print("How old are you:")
+     scanf("%i", &age);                   //input: 17
+     printf("You are %i years old", age); //output: You are 17 years old 
+
+// fgets()
+     print("Whats's your name:")
+     fgets(name , 25 , stdin);            //input: Fatiu Hafees
+     printf("Hello %s", name);            //output: Hello Fatiu Hafees
+     return 0;
+}
+
+
+
+
+
+
+//Math Functions 
+
+//#include <math.h>
+//sqrt(),  lets us find the square root of a number
+//pow(),   lets us raise somthing to the power of
+//round(), lest us round a number
+//ceil(),  lest us round up a number
+//floor(), lest us round down a number
+//fabs(),  lest us turn a negative number positive
+//log()
+//sin(), cos(), tna()
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+//pow
+     int a = pow (2,4);
+     printf("%i",a), //ouput: 16
+
+//fabs
+     int b = fabs(-100);
+     printf("%i",b); //ouput: 100
+     return 0;
+}
