@@ -115,3 +115,83 @@ int main(){
      printf("%i",b); //ouput: 100
      return 0;
 }
+
+
+
+
+
+//If Statment 
+
+//if(){},     if someing is true program does whatever is in parentheses
+//elseif(){}, used for checking for different outcomes 
+//else{},     if stament is not true we go to else 
+
+
+//switch(){}, is an alternative to using more elseif statments, test value against many cases for equality so ==(same as) 
+//case '':,      we case '': instead of elseif 
+//break:,     must allows ways write at the end of each case
+//default:    we default: instead of else
+
+// if statment 
+#include <stdio.h>
+
+int main(){
+    
+    double A= 3.2;
+// if statment 
+    if (A==3.2){
+        printf("valid");
+    }
+// else statment 
+    else {
+        printf("not valid");
+    }  
+    return 0;
+}
+
+
+// switch - character
+#include <stdio.h>
+char grade = 'A';
+
+int main(){
+   
+    switch (grade){
+        case 'A':
+        printf("perfect\n");
+        break; 
+        
+        case 'B':
+        printf("Alright\n");
+        break; 
+        
+        default:
+        printf("Please enter valid grade\n"); 
+    }
+    return 0;
+}
+// switch - numbers
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    
+    int grade = 2;
+   
+    printf("Enter grade:");
+    scanf("%d",&grade);
+   
+    switch (grade){
+        case 2:
+        printf("perfect\n");
+        break; 
+        
+        case 3:
+        printf("Alright\n");
+        break; 
+        
+        default:
+        printf("Please enter valid grade\n"); 
+    }
+    return 0;
+}
