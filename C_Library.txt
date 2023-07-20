@@ -297,10 +297,12 @@ int main(){
 //return, lets us return a value back to int main from a function
 
 #include <stdio.h>
-double math(double x){  // we need to change void to the data type of what we are returning
+double math(double x)// we need to change void to the data type of what we are returning
+{  
      return x * x;    
 }
-int main(){                
+int main()
+{                
      double num = math(2.5);
      printf("%0.2lf",num);  //output: 6.25
      return 0;
@@ -315,44 +317,32 @@ int main(){
 //(condition)?, if value true: if value false
 
 #include <stdio.h>
-int math(int x,int y){
-    
-    return (y>x)? y:x; 
-      
+int math(int x,int y)
+{  
+    return (y>x)? y:x;     
 }
-int main(){
-    
+int main()
+{ 
     int num= math(10,6);
     printf("%d",num); //output: 10 
     return 0;
 }
 
 
-Pinned by Bro Code
-@BroCodez
-1 year ago
+
+
+
+// Function Prototypes
+
+// Ensures that calls to a function are made with the correct arguments
+// A function prototype causes the compiler to flag an error if arguments are missing
+// Make it a habbit to allways have functions go after main(){}
 #include <stdio.h>
 
 void hello(char[], int); //function prototype
 
 int main()
 {
-   // function prototype
-
-   // WHAT IS IT?
-   // Function declaration, w/o a body, before main()
-   // Ensures that calls to a function are made with the correct arguments
-
-   // IMPORTANT NOTES
-   // Many C compilers do not check for parameter matching
-   // Missing arguments will result in unexpected behavior
-   // A function prototype causes the compiler to flag an error if arguments are missing
-
-   // ADVANTAGES
-   // 1. Easier to navigate a program w/ main() at the top
-   // 2. Helps with debugging
-   // 3. Commonly used in header files
-
    char name[] = "Bro";
    int age = 21;
 
