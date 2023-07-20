@@ -1,10 +1,10 @@
 // Format Specifier % = defines and formats a type of data to be displayed 
 
-//<stdbool.h>, used for workign with bool
+//<stdbool.h>, used for working with bool
 //<ctype.h>,   used for working with string (string and char)
 
 //%c = char 
-//%s = string (array of charactors)
+//%s = string (array of characters)
 //%f = float
 //%lf = double 
 //%d = integer 
@@ -26,8 +26,8 @@ int main(){
      printf("Item 1: %8.2f/n",item1);  //ouput: Item 1:         2.32
      printf("Item 1: %8.2f/n",item2);  //ouput: Item 2:        12.32
 
-//left allign %-1
-     printf("Item 1: %-8.2f",item1);  //ouput: Item 1: 2.32
+//left align %-1
+     printf("Item 1: %-8.2f",item1);  //output: Item 1: 2.32
      printf("Item 2: %-8.2f/n",item2);//ouput: Item 2: 12.32
      return 0;
 }
@@ -39,10 +39,10 @@ int main(){
 //Arithmetic Operators 
 
 // +  (addition)
-// -  (sudtraction)
+// -  (subtraction)
 // *  (multiplication)
-// /  (divistion)
-// %  (modulus),   shows remainder 
+// /  (division)
+// %  (modulus),   shows the remainder 
 // ++ (increment), adds one
 // -- (decrement), takes one
 
@@ -67,7 +67,7 @@ int main(){
 
 //User Input 
 
-// fgets(),   allows us to get user input but with white space, includes new line charactor 
+// fgets(),   allows us to get user input but with white space, includes a newline character 
 // scanf(),   allows us to get user input 
 
 #include <stdio.h>
@@ -95,7 +95,7 @@ int main(){
 
 //#include <math.h>, used for working with the function maths
 //sqrt(),  lets us find the square root of a number
-//pow(),   lets us raise somthing to the power of
+//pow(),   lets us raise something to the power of
 //round(), lest us round a number
 //ceil(),  lest us round up a number
 //floor(), lest us round down a number
@@ -109,11 +109,11 @@ int main(){
 int main(){
 //pow
      int a = pow (2,4);
-     printf("%i",a), //ouput: 16
+     printf("%i",a), //output: 16
 
 //fabs
      int b = fabs(-100);
-     printf("%i",b); //ouput: 100
+     printf("%i",b); //output: 100
      return 0;
 }
 
@@ -123,15 +123,15 @@ int main(){
 
 //If Statment 
 
-//if(){},     if someing is true program does whatever is in parentheses
-//elseif(){}, used for checking for different outcomes 
-//else{},     if stament is not true we go to else 
+//if(){},     if something is true program does whatever is in parentheses
+//else if(){}, used for checking for different outcomes 
+//else{},     if statement is not true we go to else 
 
 
-//switch(){}, is an alternative to using more elseif statments, test value against many cases for equality so ==(same as) 
-//case '':,      we case '': instead of elseif 
-//break:,     must allows ways write at the end of each case
-//default:    we default: instead of else
+//switch(){}, is an alternative to using more else if statements, test value against many cases for equality so ==(same as) 
+//case '':,   we case '': instead of else if 
+//break:,     must  always write at the end of each case
+//default:,   we use default: instead of else
 
 // if statment 
 #include <stdio.h>
@@ -139,11 +139,11 @@ int main(){
 int main(){
     
     double A= 3.2;
-// if statment 
+// if statement 
     if (A==3.2){
         printf("valid");
     }
-// else statment 
+// else statement 
     else {
         printf("not valid");
     }  
@@ -203,8 +203,8 @@ int main(){
 
 // Logical Operators
 
-//&&,  used to write AND, so both statments must be true
-//||,  used to write OR, so atleast one statment is true 
+//&&,  used to write AND, so both statements must be true
+//||,  used to write OR, so at least one statement is true 
 //!,   used to write NOT, so reverses the state of a condition ( ! = 0 )
 
 #include <stdio.h>
@@ -214,7 +214,7 @@ int main(){
     int sunny = 0; 
     
     if (!sunny){
-        printf("It's not sunny outside");  // this string will be printed since the varible "sunny" is false ("sunny" is 0)
+        printf("It's not sunny outside");  // this string will be printed since the variable "sunny" is false ("sunny" is 0)
     }
     else{
         printf("It's sunny outside");
@@ -226,7 +226,7 @@ int main(){
 
 
 
-//Function (work like subrountine) 
+//Function (work like subroutine) 
 Functions allow us to save and reuse code at any time
 
 //void...(){},we use this command to initialise the function
@@ -243,7 +243,7 @@ void lyrics(){
 int main(){
 
     lyrics();
-    lyrics();   //the lyrics above will be printted twice 
+    lyrics();   //the lyrics above will be printed twice 
     return 0;    
 }
 
@@ -251,9 +251,9 @@ int main(){
 
 
 
-//Arguments And Parametors 
+//Arguments And Parameters 
 
-//Parametors,what a function expects when its invoked--void function(parametors)
+//Parameters, what a function expects when its invoked--void function(parameters)
 //Arguments, what you are sending a function--function(Argument)
 
 #include <stdio.h>
@@ -265,7 +265,7 @@ void lyrics(char x[],char y[]){ //parametor = char x[],char y[]
 }
 int main(){
     
-    char x[]= "came";  //dont put numbers in [] for char type
+    char x[]= "came";  //don't put numbers in [] for char type
     char y[]= "praise";  
     
     lyrics(x,y); //argument = x,y
@@ -273,7 +273,7 @@ int main(){
     
 }
 
-//better version , the one above is used when we have two different data types for the function 
+//better version, the one above is used when we have two different data types for the function 
 #include <stdio.h>
 char lyrics(char x[],char y[]){ 
     printf("\nI came, I saw, I %s, I saw",x);
@@ -283,7 +283,7 @@ char lyrics(char x[],char y[]){
 }
 int main(){
     
-    lyrics("cam","praise");    
+    lyrics("cam", "praise");    
     
     return 0;
 }
@@ -294,15 +294,15 @@ int main(){
 
 //Return Statment 
 
-//return, lets us return a values back to int main from a function
+//return, lets us return a value back to int main from a function
 
 #include <stdio.h>
-double math(double x){  // we need to change void to data type of what we are returing
+double math(double x){  // we need to change void to the data type of what we are returning
      return x * x;    
 }
 int main(){                
      double num = math(2.5);
-     printf("%0.2lf",num);  //ouput: 6.25
+     printf("%0.2lf",num);  //output: 6.25
      return 0;
 }
 
@@ -310,9 +310,9 @@ int main(){
 
 
 
-//Ternary Operators = shortcut to if/else when assigning/returing a values 
+//Ternary Operators = shortcut to if/else when assigning/returning a values 
                
-//(condition)?, if value true : if value false
+//(condition)?, if value true: if value false
 
 #include <stdio.h>
 int math(int x,int y){
@@ -325,4 +325,44 @@ int main(){
     int num= math(10,6);
     printf("%d",num); //output: 10 
     return 0;
+}
+
+
+Pinned by Bro Code
+@BroCodez
+1 year ago
+#include <stdio.h>
+
+void hello(char[], int); //function prototype
+
+int main()
+{
+   // function prototype
+
+   // WHAT IS IT?
+   // Function declaration, w/o a body, before main()
+   // Ensures that calls to a function are made with the correct arguments
+
+   // IMPORTANT NOTES
+   // Many C compilers do not check for parameter matching
+   // Missing arguments will result in unexpected behavior
+   // A function prototype causes the compiler to flag an error if arguments are missing
+
+   // ADVANTAGES
+   // 1. Easier to navigate a program w/ main() at the top
+   // 2. Helps with debugging
+   // 3. Commonly used in header files
+
+   char name[] = "Bro";
+   int age = 21;
+
+   hello(name, age);
+
+   return 0;
+}
+
+void hello(char name[], int age)
+{
+   printf("\nHello %s", name);
+   printf("\nYou are %d years old", age);
 }
