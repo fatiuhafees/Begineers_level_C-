@@ -1,10 +1,14 @@
 // Format Specifier % = defines and formats a type of data to be displayed 
 
+//<stdbool.h>, used for workign with bool
+//<ctype.h>,   used for working with string (string and char)
+
 //%c = char 
 //%s = string (array of charactors)
 //%f = float
 //%lf = double 
 //%d = integer 
+//%d = bool
 
 //%.1 = decimal precision 
 //%1 = minium field width 
@@ -92,7 +96,7 @@ int main(){
 
 //Math Functions 
 
-//#include <math.h>
+//#include <math.h>, used for working with the function maths
 //sqrt(),  lets us find the square root of a number
 //pow(),   lets us raise somthing to the power of
 //round(), lest us round a number
@@ -194,4 +198,81 @@ int main(){
         printf("Please enter valid grade\n"); 
     }
     return 0;
+}
+
+
+
+
+
+// Logical Operators
+
+//&&,  used to write AND, so both statments must be true
+//||,  used to write OR, so atleast one statment is true 
+//!,   used to write NOT, so reverses the state of a condition ( ! = 0 )
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+    int sunny = 0; 
+    
+    if (!sunny){
+        printf("It's not sunny outside");  // this string will be printed since the varible "sunny" is false ("sunny" is 0)
+    }
+    else{
+        printf("It's sunny outside");
+    }
+   
+}
+
+
+
+
+
+
+//Function (work like subrountine) 
+Functions allow us to save and reuse code at any time
+
+//void...(){},we use this command to initialise the function
+//..();,    we use this command to call the function
+#include <stdio.h>
+
+void lyrics(){
+     printf("\nI came, I saw, I came, I saw");
+     printf("\nI praise the Lord, then break the law");
+     printf("\nI take what's mine, then take some more");
+     printf("\nIt rains, it pours, it rains, it pours\n");
+}
+    
+int main(){
+
+    lyrics();
+    lyrics();   //the lyrics above will be printted twice 
+    return 0;    
+}
+
+
+
+
+
+//Arguments And Parametors 
+
+//Parametors,what a function expects when its invoked--void function(parametors)
+//Arguments, what you are sending a function--function(Argument)
+
+#include <stdio.h>
+void lyrics(char x[],char y[]){ //parametor = char x[],char y[]
+    printf("\nI came, I saw, I %s, I saw",x);
+    printf("\nI %s the Lord, then break the law",y);
+    printf("\nI take what's mine, then take some more");
+    printf("\nIt rains, it pours, it rains, it pours\n");
+}
+int main(){
+    
+    char x[]= "came";  //dont put numbers in [] for char type
+    char y[]= "praise";  
+    
+    lyrics(x,y); //argument = x,y
+    return 0;
+    
 }
