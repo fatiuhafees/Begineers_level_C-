@@ -356,3 +356,67 @@ void hello(char name[], int age)
    printf("\nHello %s", name);
    printf("\nYou are %d years old", age);
 }
+
+
+
+
+//String Functions
+
+// strupr and strlwr dont work in c standard library for linux so look for solution in C branch :) 
+
+// strcat(,);             // appends a character to the end of a another character 
+// strncat(, ,);         // appends a number character to the end of a another character 
+// strcpy(,);           // replaces the content of a character with another character 
+// strncpy(, ,);       //replaces a number of characters with another character
+//strset(,'');        //sets all characters of a string to a given cgharacter (this function does not work for linux) solution: memset(, '', strlen());
+
+//int result = strlen();  //allows us to calculate the length of a given string as int 
+//int result = strcmp();  //allows us to compare all characters to another, giving 0 if they are the same and anyother number if not the same 
+//int result = strncmp(); //compare n characters 
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char str1 []= "pro";
+    char str2 []= "player";
+    
+    strcat(str1,str2); 
+    printf("%s",str1); //output: proplayer
+    
+    strncat(str1,str2,1); //n=1
+    printf("%s",str1); //output: prop
+    
+    strcpy(str1,str2); 
+    printf("%s",str1); //output: player
+    
+    strncpy(str1,str2,2); //replaces the first two letters
+    printf("%s",str1); //output: plo
+   
+    memset(str1, '?', strlen(str1)); //strlen() means we want to set all characters to '?'
+    printf("%s",str1); //output: ???
+
+    int num= strlen(str1);
+    printf("%d",num); //output: 3
+    return 0;
+}
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+
+    char str1[] = "pro";
+    char str2[] = "pro";
+    
+    int result = strcmp(str1, str2);
+    
+    if(result== 0)
+    {
+        printf("\nOK"); //ouput: OK
+    }
+    else
+    {
+        printf("\nError");
+    }
+    return 0; 
+}
