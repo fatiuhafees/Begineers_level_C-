@@ -549,8 +549,6 @@ int main()
 
 
 
-
-
 //Arrays
 array = is a data structure that can store many values of the same data type.
 #include <stdio.h>
@@ -569,5 +567,69 @@ int main()
 
    printf("$%.2lf", prices[0]); // 0 is index for 5.0
   
+   return 0;
+}
+
+
+
+
+//Printing Arrays With Loop
+
+//sizeof(); //reads the byte of the value 
+//sizeof(array)/sizeof(array[0]); //this will read how many values are in the array
+                             //math: sum of byte / byte of just one = how many elements are in the array 
+#include <stdio.h>
+int main()
+{
+
+    double prices[] = {5.0, 10.0, 15.0, 25.0}; 
+    for(int i = 0; i < sizeof(prices)/sizeof(prices[0]); i++)
+    {
+        printf("£%.2lf",prices[i]);
+        printf("\n");         
+    }
+   return 0;
+}
+
+
+
+
+// 2D Arrays
+
+// 2D array = is an array, where each element is an entire array. useful if you need a matrix, grid, or table of data
+//Example:
+int numbers[2][3] = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                    };
+   
+
+#include <stdio.h>
+int main()
+{
+   int numbers[2][3];
+
+   int rows = sizeof(numbers)/sizeof(numbers[0]);  //math: 36/12= 3
+   int columns = sizeof(numbers[0])/sizeof(numbers[0][0]); //math: 12/3= 4
+
+   printf("rows: %d\n", rows);
+   printf("columns: %d\n", columns);
+
+   numbers[0][0] = 1;
+   numbers[0][1] = 2;
+   numbers[0][2] = 3;
+   numbers[1][0] = 4;
+   numbers[1][1] = 5;
+   numbers[1][2] = 6;
+
+   for(int i = 0; i < rows; i++) // using nested loop to print the array
+   {
+      for(int j = 0; j < columns; j++)
+      {
+         printf("%d ", numbers[i][j]);
+      }
+      printf("\n");
+   }
+
    return 0;
 }
