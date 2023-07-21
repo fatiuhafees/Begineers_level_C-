@@ -449,7 +449,7 @@ char name[25];
 int main(){
 printf("\nWhat's your name:\n");
 fgets(name, 25, stdin);
-name[strlen(name)-1]='\0';
+name[strlen(name)-1]='\0'; // lets us get full name with out make new line
     
     while(strlen(name)==0){
         printf("\nYou did not enter your name");
@@ -495,7 +495,7 @@ int main()
    printf("Enter # of columns: ");
    scanf("%d", &columns); //input 5
 
-   scanf("%c"); //clears \n from buffer
+   scanf("%c", &symbol); //clears \n from buffer, makes it so you dont end up with unneeded white space
 
    printf("Enter a symbol to use: ");
    scanf("%c", &symbol); //input $
