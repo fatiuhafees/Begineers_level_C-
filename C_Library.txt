@@ -735,3 +735,10 @@ void printArray(char array[], int size)
       printf("%c ", array[i]);
    }
 }
+
+
+
+
+//Strut
+
+
