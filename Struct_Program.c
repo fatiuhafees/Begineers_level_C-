@@ -8,6 +8,9 @@ int main()
 {
     struct Player Player1; 
     struct Player Player2; 
+
+    //struct Player Player1={loser,2}; //this is more practical and efficient 
+    //struct Player Player2={winner,5}; 
     
     Player1.score = 2;
     strcpy(Player1.title,"Loser ");
@@ -18,7 +21,7 @@ int main()
     strcpy(Player2.title,"Winner ");
     printf("%s",Player2.title);
     printf("With %d points: Player 2\n",Player2.score);
-   
+
     return 0;
 
 }
