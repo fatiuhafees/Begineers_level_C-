@@ -429,7 +429,6 @@ int main()
 //Loops
 
 //for loop, using for(index,condition,increament or decrement); //repeates a section of code a limited amount of times 
-
 #include <stdio.h>
 #include <string.h>
 
@@ -439,8 +438,8 @@ int main(){
     }
 return 0; 
 }
-//while loop, using while(condition) //repeates a section of code possible unlimited amount of times 
 
+//while loop, using while(condition) //repeates a section of code possible unlimited amount of times 
 #include <stdio.h>
 #include <string.h>
 char name[25];
@@ -577,7 +576,7 @@ int main()
 
 //sizeof(); //reads the byte of the value 
 //sizeof(array)/sizeof(array[0]); //this will read how many values are in the array
-                             //math: sum of byte / byte of just one = how many elements are in the array 
+                             //math:  byte sum / byte of just one = how many elements are in the array 
 #include <stdio.h>
 int main()
 {
@@ -609,8 +608,8 @@ int main()
 {
    int numbers[2][3];
 
-   int rows = sizeof(numbers)/sizeof(numbers[0]);  //math: 36/12= 3
-   int columns = sizeof(numbers[0])/sizeof(numbers[0][0]); //math: 12/3= 4
+   int rows = sizeof(numbers)/sizeof(numbers[0]);  //math: 24/12= 2
+   int columns = sizeof(numbers[0])/sizeof(numbers[0][0]); //math: 12/4= 3
 
    printf("rows: %d\n", rows);
    printf("columns: %d\n", columns);
@@ -633,3 +632,64 @@ int main()
 
    return 0;
 }
+
+
+
+
+
+//Array Of Strings 
+
+//char array[][]= {}; //first curly brace determines how much columns we can have. second curly brace determines how long the characters can be.
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+char number[2][10]={"hi","hello","hi"};
+
+   for (int i=0; i <= sizeof(number)/sizeof(number[0]); i++)
+   {
+        printf("%s\n",number[i]);
+      
+   }
+}
+
+
+
+
+//Swapiung values of variables 
+
+//swaping variables 
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int x = 2;
+    int y = 3; 
+    int temp; 
+    
+    temp = x;
+    x = y; 
+    y = temp; 
+    
+    printf("X = %d\n",x); //ouput: X = y
+    printf("Y = %d",y);   //ouput: Y = x
+}
+
+// swapping arrays 
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char x[20] = "metal";
+    char y[20] = "wood"; 
+    char temp[20]; 
+    
+    strcpy(temp, x);
+    strcpy(x, y);
+    strcpy(y, temp);
+
+    printf("X = %s\n",x); //ouput: X = wood
+    printf("Y = %s",y);   //ouput: Y = metal
+}
+
