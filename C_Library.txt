@@ -639,7 +639,7 @@ int main()
 
 //Array Of Strings 
 
-//char array[][]= {}; //first curly brace determines how much columns we can have. second curly brace determines how long the characters can be.
+//char array[][]= {}; //first curly brace determines how many elements we can have. The second curly brace determines how long the characters can be.
 
 #include <stdio.h>
 #include <string.h>
