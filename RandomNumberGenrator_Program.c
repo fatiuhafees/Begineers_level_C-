@@ -15,6 +15,7 @@ int main()
 
 //rand will give us a random number between 0 - 32,767
 // modulus (%) allows us to determine the highest posible number       
+//+ 1 means, the program will generate a random number between 1 - 6 we call 1 offset or minimum 
         int dice = (rand()%6)+1;
         printf("Rolled: %d\n",dice);
         sum += dice;
