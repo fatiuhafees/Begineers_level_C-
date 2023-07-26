@@ -257,7 +257,8 @@ int main(){
 //Arguments, what you are sending a function--function(Argument)
 
 #include <stdio.h>
-void lyrics(char x[],char y[]){ //parametor = char x[],char y[]
+void lyrics(char x[],char y[])  //parametor = char x[],char y[]
+{ 
     printf("\nI came, I saw, I %s, I saw",x);
     printf("\nI %s the Lord, then break the law",y);
     printf("\nI take what's mine, then take some more");
@@ -283,7 +284,7 @@ char lyrics(char x[],char y[]){
 }
 int main(){
     
-    lyrics("cam", "praise");    
+    lyrics("cam", "praise");   
     
     return 0;
 }
@@ -317,15 +318,16 @@ int main()
 //(condition)?, if value true: if value false
 
 #include <stdio.h>
-int math(int x,int y)
-{  
-    return (y>x)? y:x;     
-}
+
 int main()
 { 
     int num= math(10,6);
     printf("%d",num); //output: 10 
     return 0;
+}
+int math(int x,int y) //function 
+{  
+    return (y>x)? y:x;   //So if y is bigger that x it will returm y. While if x is bigger that y it will returm x.
 }
 
 
@@ -371,7 +373,7 @@ void hello(char name[], int age)
 // strncpy(, ,);       //replaces a number of characters with another character
 //strset(,'');        //sets all characters of a string to a given cgharacter (this function does not work for linux) solution: memset(, '', strlen());
 
-//int result = strlen();  //allows us to calculate the length of a given string as int 
+//int result = strlen();  //allows us to calculate the length of a given string as int (for arrays we use sizeof())
 //int result = strcmp();  //allows us to compare all characters to another, giving 0 if they are the same and anyother number if not the same 
 //int result = strncmp(); //compare n characters 
 #include <stdio.h>
@@ -770,3 +772,43 @@ int main()
 }
 
 
+
+
+//Typedef, gives an exsisting data type a nickname
+// check C branch for Typedef example :)
+//tyedef...;
+//tyedef struct {}...;
+
+
+
+//Array of structs
+// check C branch for array of structs example and explanation :)
+
+
+
+
+//Enums, is an integer identifier which makes programs more readable
+//enum...{ = , = , = , = , = }
+
+#include <stdio.h>
+#include <string.h>
+
+enum day {Sun = 1, Mon = 2, Tue = 3, Wed = 4, Thr = 5, Fri = 6,Sat=7};
+
+int main(){
+    
+    enum day Today = Sun;
+
+    if(Today == Sun || Today == Sat) //is 1==1 or 1==7
+    {
+        printf("It's the weekend");
+    }
+
+    else
+    {
+        printf("It's a school day");
+    }
+      
+
+    return 0; 
+}
