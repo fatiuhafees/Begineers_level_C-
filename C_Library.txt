@@ -812,3 +812,43 @@ int main(){
 
     return 0; 
 }
+
+
+
+
+
+//Random Number Generator 
+
+//<stdlib.h>
+//<time.h>
+
+//srand();       // determines the starting range of rand(), if srand is not declared the program will asssume srand(1)
+//rand();       //generates a randome number
+//time();      //returns time in a number of seconds 
+
+#include <stdio.h> 
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+// 'seed-rand(time(0))' allows us to say that the generator will start from 0
+    srand(time(0));
+    
+    int sum = 0;
+    
+    for (int i = 0; i < 5; i++)
+    {
+
+//rand will give us a random number between 0 - 32,767
+// modulus (%) allows us to determine the highest posible number     
+//+ 1 means, the program will generate a random number between 1 - 6 we call 1 offset or minimum 
+        int dice = (rand()%6)+1;
+        printf("Rolled: %d\n",dice);
+        sum+ = dice;
+    }
+    
+    printf("\nScore: %d\n",sum);
+
+    return 0; 
+}
