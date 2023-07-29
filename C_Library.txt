@@ -977,6 +977,7 @@ void printAge(int *pAge)
 //'remove( file name );' deletes the file 
 
 //'w' override any existing text in the file. While 'a'adds new text not overriding
+// Warning!! if file is on destoke you will need to find the the file postion or file propertie 
 
 #include <stdio.h>
 int main() {
@@ -1001,20 +1002,25 @@ int main() {
 
 //Reading files
 
+//using 'r' as our opperator we can read whats inside a file 
+
 #include <stdio.h>
 
 int main()
-{
+{ 
    FILE *pF = fopen("poem.txt", "r");
-   char buffer[255];
+ //this means that we intead to read 225 characters of each/a line of the file 
+   char buffer[255]; 
 
+//checking to see if the file exist or not
    if(pF == NULL)
    {
       printf("Unable to open file!\n");
    }
    else
    {
-      while(fgets(buffer, 255, pF) != NULL)
+//by using a while loop we are reading all the characters in the file. This works as the program reads until it encounters a empty line (Null = 0).
+      while(fgets(buffer, 255, pF) != NULL) // while line is not equal to null print 
       {
          printf("%s", buffer);
       }
