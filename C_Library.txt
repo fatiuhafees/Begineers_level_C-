@@ -774,20 +774,20 @@ int main()
 
 
 
-//Typedef, gives an exsisting data type a nickname
-// check C branch for Typedef example :)
-//tyedef...;
-//tyedef struct {}...;
+//Typedef gives an existing data type a nickname
+//Check C branch for the Typedef example :)
+//typedef...;
+//typedef struct {}...;
 
 
 
 //Array of structs
-// check C branch for array of structs example and explanation :)
+//Check the C branch for an array of structs example and explanation :)
 
 
 
 
-//Enums, is an integer identifier which makes programs more readable
+//Enums is an integer identifier that makes programs more readable
 //enum...{ = , = , = , = , = }
 
 #include <stdio.h>
@@ -841,7 +841,7 @@ int main()
     {
 
 //rand will give us a random number between 0 - 32,767
-// modulus (%) allows us to determine the highest posible number     
+// modulus (%) allows us to determine the highest possible number     
 //+ 1 means, the program will generate a random number between 1 - 6 we call 1 offset or minimum 
         int dice = (rand()%6)+1;
         printf("Rolled: %d\n",dice);
@@ -852,3 +852,75 @@ int main()
 
     return 0; 
 }
+
+
+
+
+// Bitwise Operators = special operators used in bit-level programming (knowing binary is important for this topic)
+
+// & = AND. Both decimals have to have 1. 
+// | = OR.  Either decimal can have 1.
+// ^ = XOR. Only one decimal should have 1.
+// <<  left shift. Copies a decimal and shifts to the left n amount of times. 
+// >>  right shift. Copies a decimal and shifts to the right n amount of times.
+
+#include <stdio.h>
+ 
+int main()
+{
+   int x = 6;  //    6  = 00000110
+   int y = 12; //    12 = 00001100 
+   int z = 0;  //    0  = 00000000
+
+   z = x & y;
+   printf("AND = %d\n", z); //output: 4
+
+   z = x | y;
+   printf("OR = %d\n", z); //output: 14
+
+   z = x ^ y;
+   printf("XOR = %d\n", z); //output: 10
+
+   z = x << 2;
+   printf("SHIFT LEFT = %d\n", z); //output: 10
+
+   z = x >> 2;
+   printf("SHIFT RIGHT = %d\n", z);
+
+   return 0;
+}
+
+
+
+
+//Memory Address
+  
+// memory = an array of bytes within RAM (street)
+// memory block = a single unit (byte) within memory (house), used to hold some value (person)
+// memory address = the address of where a memory block is located (house address)
+
+//memory block = printf("%d", sizeof(...))
+//memory address = printf("%p", &...);
+
+#include <stdio.h>
+
+int main(){
+   int num = 4; 
+   char a;
+   char b[4];
+//memory block (how many bytes)
+   printf("%d bytes\n", sizeof(num)); //output: 4 bytes
+   printf("%d bytes\n", sizeof(a)); //output: 1 bytes
+   printf("%d bytes\n", sizeof(b)); //output: 4 bytes 
+
+//memory address (the hexadecimal)
+   printf("%p\n", &num); //output: 0x7ffcaa8deecc
+   printf("%p\n", &a); //output: 0x7ffcaa8deecb
+   printf("%p\n", &b); //output: 0x7ffcaa8deec7
+
+   return 0;
+}
+
+
+
+
