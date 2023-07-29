@@ -966,3 +966,32 @@ void printAge(int *pAge)
    printf("Age: %d\n", *pAge); //dereference
 }
 
+
+
+
+//Writing files
+
+//'FILE *file varible name;': the data type for a file 
+//'fopen( file name, opperator );' used to make the file 
+//'fclose( file varible name );' closes the file, normally used at the end when we have finished using the file
+//'remove( file name );' deletes the file 
+
+//'w' override any existing text in the file. While 'a'adds new text not overriding
+
+#include <stdio.h>
+int main() {
+
+//making file 
+    FILE *pF = fopen("testfile.text","w");
+    
+//sending text to file
+    fprintf(pF, "testing testing testing");
+
+//closing file
+    fclose(pF);
+
+//deleting the file
+    remove("testfile.text");
+
+    return 0;
+}
